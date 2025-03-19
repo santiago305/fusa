@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+    DirectoryIndex fusa-fusion.php index.php
+
+    RewriteEngine On
+
+    RewriteRule ^home$                              fusa-fusion.php 
+    RewriteRule ^la_carta_fusa$                     menu-fusa.php
+
+    RewriteCond %{HTTP_HOST} ^lacarta\.shop [NC]
+    RewriteRule ^(.*)$ https://www.lacarta.shop/$1 [L,R=301]
+
+</IfModule>

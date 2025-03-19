@@ -1,0 +1,689 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@900&display=swap');
+#loader-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    transition: transform 0.5s; /* Agrega una transición para el pre-loader */
+    transform: translateY(0); /* Inicialmente, el pre-loader está en su posición normal */
+}
+
+#lottie-loader {
+    width: 350px;
+    height: 350px;
+}
+/* .precio-bebida:nth-child(7){
+        margin:0;
+    }
+    esta parte que tienes debes de borrarlos de todos cuando hayaotra pagina */
+/*ahora comenzamos con la pagina*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+body{
+    background-image: url('img/fondo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    padding: 0;
+    margin: 0;
+}
+
+.embultura{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 1s;
+}
+
+.max-conteiner{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.max-conteiner .img{
+    width: 600px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 1s;
+}
+
+
+.max-conteiner .img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.max-conteiner .img .img2{
+    display: none;
+    width: 100%;
+    object-fit: cover;
+}
+.max-conteiner .entrada{
+    min-width: 400px;
+    image-rendering: optimizeQuality;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.entrada img{
+    width: 200px;
+}
+.entrada ul{
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.entrada li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+
+.button-01{
+    cursor: pointer;
+    background-color: #F2E4DA;
+    border: #AA744B solid 5px;
+    border-top-left-radius: 0px; 
+    border-top-right-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius: 0;
+    width: 30vw;
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.button-01 .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #AA744B;
+    z-index: -1;
+    transition: 1s;
+    border-top-left-radius: 0px; 
+    border-top-right-radius: 12px; 
+    border-bottom-left-radius: 12px; 
+    border-bottom-right-radius: 0;
+}
+
+.button-01:hover .overlay{
+    width: 100%;
+}
+
+.button-01 a{
+    color: #AA744B;
+    transition: 1s;
+    display: block;
+
+}
+
+.button-01:hover a{
+    color: #F2E4DA;
+}
+@media screen and (max-width:1250px){
+    .max-conteiner .img{
+        width: 400px;
+    }
+    .button-01{
+        font-size: 20px;
+    }
+} 
+@media screen and (max-width:875px){
+    .max-conteiner .img{
+        width: 300px;
+    }
+    .max-conteiner .img img{
+        display: none;
+    }
+    .max-conteiner .img .img2{
+        display: block;
+    }
+    .max-conteiner .entrada{
+        min-width: 0px;
+    }   
+    .entrada ul{
+        min-width: 250px;
+    } 
+    .entrada img{
+        display: none;
+    }
+    .button-01{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:670px){
+    .button-01{
+        font-size: 15px;
+    }
+} 
+@media screen and (max-width:590px){
+    .entrada img{
+        display: block;
+        width: 70%;
+    }
+    .max-conteiner .img .img2{
+        display: none;
+    }
+    .max-conteiner .img{
+        width: 400px;
+        margin: 0;
+    }
+    .max-conteiner .entrada{
+        width: 400px;
+    }
+    .button-01
+    {
+        width: 300px;
+    }
+    .entrada ul{
+        margin-top: 30px;
+    }
+
+}   
+.emboltura-menu{
+    padding: 50px 350px;
+    transition: 1s;
+}
+.header-conteiner{
+    width: 100%;
+    height: fit-content;
+}
+
+.img-header{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+}
+.img-header img{
+    object-fit: cover;
+    width: 100%;
+    image-rendering: optimizeQuality;
+    
+}
+.menu{
+    margin-top: 40px;
+    height: fit-content;
+    z-index: 100;
+}
+.tabs{
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.tabs li{
+    width: 100%;
+    margin: 10px;
+    flex: 1;
+}
+.Pedido-fusa{
+    margin: 10px;
+    cursor: pointer;
+    color: #AA744B;
+    background-color: #F2E4DA;
+    border: #AA744B solid 5px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    text-align: center;    
+}
+.Pedido-fusa:hover{
+    color: #F2E4DA;
+}
+.Pedido-fusa .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #AA744B;
+    z-index: -1;
+    transition: 1s;
+}
+
+.Pedido-fusa:hover .overlay{
+    width: 100%;
+}
+.pedidos-fusa{
+    margin-bottom: 10px;
+}
+.button-menu{
+    cursor: pointer;
+    color: #AA744B;
+    background-color: #F2E4DA;
+    border: #AA744B solid 5px;
+    border-top-right-radius: 15px; 
+    border-bottom-left-radius: 15px; 
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.button-menu:hover{
+    color: #F2E4DA;
+}
+.button-menu .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #AA744B;
+    z-index: -1;
+    transition: 1s;
+    border-top-left-radius: 0px; 
+    border-top-right-radius: 8px; 
+    border-bottom-left-radius: 8px; 
+    border-bottom-right-radius: 0;
+}
+
+.button-menu:hover .overlay{
+    width: 100%;
+}
+
+.active-a{
+	color: #F2E4DA !important; 
+    background: #AA744B !important;
+    transition: 1s;
+}
+/* emboltura */
+@media screen and (max-width:1850px){
+    .emboltura-menu{
+        padding: 50px 300px;
+    } 
+
+}
+@media screen and (max-width:1749px){
+    .delete{
+        display: none;
+    } 
+
+}
+@media screen and (max-width:1600px){
+    .emboltura-menu{
+        padding: 50px 250px;
+    }    
+}
+@media screen and (max-width:1400px){
+    .emboltura-menu{
+        padding: 50px 150px;
+    }    
+}
+
+@media screen and (max-width:1200px){
+    .emboltura-menu{
+        padding: 50px 100px;
+    }
+
+    
+}
+@media screen and (max-width:879px){
+    .emboltura-menu{
+        padding: 50px 25px;
+    }
+    
+}
+@media screen and (max-width:590px){
+    .emboltura-menu{
+        padding: 50px 0;
+    }
+    .button-menu
+    {
+        font-size: 15px;
+    }
+}   
+/*secciones*/
+
+.secciones{
+    margin: 50px 10px;
+}
+/*---------------------------
+caja de platos normales
+---------------------------*/
+    .conteiner-platos{
+        padding: 10px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        gap: 60px;
+    }
+    .dishes-fusa h2{
+            font-size: 40px;
+            color:#ffffff;
+            transition: 1s;
+    }
+    .dishes-fusa p{
+        font-size: 20px;
+        color:#ffffff;
+        transition: 1s;
+    }
+    .fusa-menu{
+        margin: 30px 0 0 30px;
+    }
+
+    .fusa-menu table{
+        width: 100%;
+        color:#ffffff;
+        font-size: 23px;
+        transition: 1s;
+    }
+
+    .menu-dishes{
+        display: flex;
+        align-items: end;
+        margin-bottom: 2px;
+    }
+    .menu-dishes td:first-child{
+        flex: 1;
+    }
+    .menu-dishes td:nth-child(2){
+        margin-left: 10px;
+        text-align: right;
+    }
+/*---------------------------
+makis
+---------------------------*/
+    .conteiner-makis{
+        width: 100%;
+        text-align: center;
+    }
+    .conteiner-makis h2{
+        font-size: 40px;
+        color: #ffffff;
+        margin-top: 50px;
+    }
+    .conteiner-makis p{
+        font-size: 30px;
+        color: #ffffff;
+        margin: 20px 0;
+    }
+    .makis-clasicos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+    
+    .makis-clasicos .platos_criollos h3{
+        font-size: 25px;
+        color: #ffffff;
+        text-align: center;
+    }
+    .makis p{
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .precios-makis{
+        background-color: #F2E4DA;
+        color: #AA744B !important;
+        margin: 10px auto !important;
+        width: fit-content;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
+/*-----------------------------
+promociones
+------------------------------*/
+    .promociones{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        gap: 40px;
+    }
+
+    .promocion-img{
+        position: relative;
+        width: 100%; 
+        overflow: hidden;
+    }
+    .promocion-img img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%; 
+        display: block;
+    }
+    .pedido{
+        margin-top: 30px;
+        cursor: pointer;
+        color: #AA744B;
+        background-color: #F2E4DA;
+        padding: 10px;
+        display: block;
+        font-size: 25px;
+        position: relative;
+        z-index: 10;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1.5;
+        transition: 1s;
+        
+    }
+
+@media screen and (max-width:1100px){
+    .dishes-fusa h2{
+        font-size: 35px;
+        text-align: center;
+    }
+    .dishes-fusa p{
+       font-size: 15px;
+       text-align: center;
+    }
+    .fusa-menu table{
+        font-size: 20px 0 0;
+    }
+
+    .makis-clasicos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 20px;
+    }
+    .conteiner-platos{
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .fusa-menu{
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width:769px){
+    .dishes-fusa h2{
+        font-size: 40px;
+    }
+    .dishes-fusap{
+        font-size: 18px;
+    }
+    .fusa-menu table{
+        font-size: 23px;
+    }
+    .conteiner-platos{
+        margin: 0;
+    }
+    
+}
+
+@media screen and (max-width:590px){
+    .promocion{
+        margin: 0 20px;
+    }
+    
+}
+
+@media screen and (max-width:475px){
+    
+    .img-header{
+        width: 120px;
+    }
+    .secciones{
+        margin: 20px 10px;
+    }
+    .makis-clasicos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    .conteiner-platos{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .dishes-fusa h2{
+        font-size: 30px;
+    }
+    .dishes-fusa p{
+        font-size: 13px;
+    }
+    .fusa-menu table{
+        font-size: 18px;
+    }
+    .menu-makis h2{
+        font-size: 30px;
+    }
+    .menu-makis p{
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .makis-clasicos .platos_criollos h3{
+        font-size: 20px;
+
+    }
+    .makis p{
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:459px){
+    .promociones{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 40px;
+    }
+}
+
+
+/*footer*/
+.footer-conteiner{
+    background-color: #A1010B;
+    width: 100%;
+    height: 30px;
+}
+
+
+
+
+
+
+
+/*makis-mejor
+.makis-especiales{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+.makis-premiun{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(350px, 1fr));
+    gap: 20px;
+}
+.makis{
+    position: relative;
+    width: 100%; 
+    cursor: pointer;
+    overflow: hidden;
+}
+.makis img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%; 
+    display: block;
+}
+.makis .overlay-makis{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: #000000a3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    opacity: 0;
+}
+.makis .overlay-makis h3{
+    transition: 1s;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 20px;
+}
+.makis .overlay-makis p{
+    transition: 1s;
+    font-size: 18px;
+    color: #fff;
+    margin: 20px;
+}
+
+.makis .overlay-makis:hover{
+    opacity: 1;
+}
+*/
